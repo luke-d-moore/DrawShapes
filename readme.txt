@@ -4,6 +4,7 @@ made an interface for a shape with location details, dimensions, name
 made a draw interface
 shape interface implements draw because I want to draw the shape
 make a shape base class which implements the shape interface 
+shape base class also has validate methods for validating the shape
 make the original shapes inherit from the shape base class
 in the base class make the draw method abstract so I have to override it in each derived class
 implement the draw methods on each of the classes 
@@ -19,8 +20,6 @@ and test a set of invalid arguments which do not meet the criteria here, these a
 5) Height must be greater than 0
 Applies only to TextBox 
 6) Text must not be null
-make a new class which I can use for the validation methods to be reused in each of the shape classes
-The new validation class does not depend on which class is using it so its methods should all be static, therefore make the class static too
 in each of the constructors call the validate methods that apply to that shape and then if all return true then carry on constructing the object
 build each of the validate methods using TDD
 write the tests, I know I want the exceptions to be thrown in each of the cases mentioned above
