@@ -4,7 +4,6 @@
     {
         public Rectangle(int x, int y, int width, int height)
         {
-            Name = nameof(Rectangle);
             Text = string.Empty;
             LocationX = x;
             LocationY = y;
@@ -15,6 +14,8 @@
             ValidateDimensions();
 
         }
+
+        public override string Name => nameof(Rectangle);
 
         public override void Draw()
         {

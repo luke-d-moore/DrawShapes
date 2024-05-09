@@ -5,7 +5,7 @@ namespace DrawShapes.Shape
 {
     public abstract class Shape : IShape
     {
-        public string Name { get; set; }
+        public abstract string Name { get; }
         public int LocationX { get; set; }
         public int LocationY { get; set; }
         public int Width { get; set; }

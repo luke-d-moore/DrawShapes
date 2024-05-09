@@ -4,7 +4,6 @@
     {
         public Ellipse(int x, int y, int diameterH, int diameterV)
         {
-            Name = nameof(Ellipse);
             Text = string.Empty;
             LocationX = x;
             LocationY = y;
@@ -14,6 +13,8 @@
             ValidateLocation();
             ValidateDimensions();
         }
+        public override string Name => nameof(Ellipse);
+
 
         public override void Draw()
         {

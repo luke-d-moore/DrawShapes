@@ -4,7 +4,6 @@
     {
         public Circle(int x, int y, int size)
         {
-            Name = nameof(Circle);
             Text = string.Empty;
             LocationX = x;
             LocationY = y;
@@ -13,6 +12,7 @@
             ValidateLocation();
             ValidateSize();
         }
+        public override string Name => nameof(Circle);
 
         public override void Draw()
         {

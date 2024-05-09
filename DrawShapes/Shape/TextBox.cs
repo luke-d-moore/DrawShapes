@@ -4,7 +4,6 @@
     {
         public TextBox(int x, int y, int width, int height, string text)
         {
-            Name = nameof(TextBox);
             LocationX = x;
             LocationY = y;
             Width = width;
@@ -15,6 +14,8 @@
             ValidateText();
             ValidateDimensions();
         }
+
+        public override string Name => nameof(TextBox);
 
         public override void Draw()
         {

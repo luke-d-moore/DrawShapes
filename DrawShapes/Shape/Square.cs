@@ -4,7 +4,6 @@
     {
         public Square(int x, int y, int size)
         {
-            Name = nameof(Square);
             Text = string.Empty;
             LocationX = x;
             LocationY = y;
@@ -14,6 +13,8 @@
             ValidateLocation();
             ValidateSize();
         }
+
+        public override string Name => nameof(Square);
 
         public override void Draw()
         {
