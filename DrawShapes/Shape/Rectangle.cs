@@ -6,14 +6,14 @@
         {
             Name = nameof(Rectangle);
             Text = string.Empty;
+            LocationX = x;
+            LocationY = y;
+            Width = width;
+            Height = height;
 
-            if (ShapeValidate.ValidateLocation(x, y) && ShapeValidate.ValidateDimensions(width, height))
-            {
-                LocationX = x;
-                LocationY = y;
-                Width = width;
-                Height = height;
-            }
+            ValidateLocation();
+            ValidateDimensions();
+
         }
 
         public override void Draw()

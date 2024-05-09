@@ -6,14 +6,13 @@
         {
             Name = nameof(Square);
             Text = string.Empty;
+            LocationX = x;
+            LocationY = y;
+            Width = size;
+            Height = size;
 
-            if (ShapeValidate.ValidateLocation(x, y) && ShapeValidate.ValidateSize(size))
-            {
-                LocationX = x;
-                LocationY = y;
-                Width = size;
-                Height = size;
-            }
+            ValidateLocation();
+            ValidateSize();
         }
 
         public override void Draw()

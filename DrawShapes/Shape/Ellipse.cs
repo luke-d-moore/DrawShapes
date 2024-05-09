@@ -6,14 +6,13 @@
         {
             Name = nameof(Ellipse);
             Text = string.Empty;
+            LocationX = x;
+            LocationY = y;
+            Width = diameterH;
+            Height = diameterV;
 
-            if (ShapeValidate.ValidateLocation(x, y) && ShapeValidate.ValidateDimensions(diameterH, diameterV))
-            {
-                LocationX = x;
-                LocationY = y;
-                Width = diameterH;
-                Height = diameterV;
-            }
+            ValidateLocation();
+            ValidateDimensions();
         }
 
         public override void Draw()

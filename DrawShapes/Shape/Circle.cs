@@ -6,13 +6,12 @@
         {
             Name = nameof(Circle);
             Text = string.Empty;
+            LocationX = x;
+            LocationY = y;
+            Width = size;
 
-            if (ShapeValidate.ValidateLocation(x, y) && ShapeValidate.ValidateSize(size))
-            {
-                LocationX = x;
-                LocationY = y;
-                Width = size;
-            }
+            ValidateLocation();
+            ValidateSize();
         }
 
         public override void Draw()
