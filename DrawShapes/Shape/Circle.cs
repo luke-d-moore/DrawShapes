@@ -9,8 +9,7 @@
             LocationY = y;
             Width = size;
 
-            ValidateLocation();
-            ValidateSize();
+            Validate();
         }
         public override string Name => nameof(Circle);
 

@@ -10,8 +10,7 @@
             Width = size;
             Height = size;
 
-            ValidateLocation();
-            ValidateSize();
+            Validate();
         }
 
         public override string Name => nameof(Square);

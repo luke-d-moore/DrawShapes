@@ -10,9 +10,7 @@
             Width = width;
             Height = height;
 
-            ValidateLocation();
-            ValidateDimensions();
-
+            Validate();
         }
 
         public override string Name => nameof(Rectangle);

@@ -10,9 +10,7 @@
             Height = height;
             Text = text;
 
-            ValidateLocation();
-            ValidateText();
-            ValidateDimensions();
+            Validate();
         }
 
         public override string Name => nameof(TextBox);

@@ -10,8 +10,7 @@
             Width = diameterH;
             Height = diameterV;
 
-            ValidateLocation();
-            ValidateDimensions();
+            Validate();
         }
         public override string Name => nameof(Ellipse);
 
