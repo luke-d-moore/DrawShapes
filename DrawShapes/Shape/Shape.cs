@@ -13,56 +13,36 @@ namespace DrawShapes.Shape
         public int Height { get; set; }
         public string Text { get; set; }
 
-        public bool Validate()
-        {
-            switch (Name)
-            {
-                case nameof(Square):
-                    ValidateLocation();
-                    ValidateSize();
-                break;
-                case nameof(Circle):
-                    ValidateLocation();
-                    ValidateSize();
-                break;
-                case nameof(Ellipse):
-                    ValidateLocation();
-                    ValidateDimensions();
-                break;
-                case nameof(Rectangle):
-                    ValidateLocation();
-                    ValidateDimensions();
-                break;
-                case nameof(TextBox): 
-                    ValidateLocation();
-                    ValidateDimensions();
-                    ValidateText();
-                break;
-                default:
-                throw new NotImplementedException();
-            }
-            return true;
-        }
+        protected Shape(int X, int Y, int width, int height, string text) 
+        { 
+            this.LocationX = X;
+            this.LocationY = Y;
+            this.Width = width;
+            this.Height = height;
+            this.Text = text;
 
-        private bool ValidateLocation()
+            Validate();
+        }
+        protected abstract bool Validate();
+        protected bool ValidateLocation()
         {
             if (LocationX < 0) throw new ArgumentException("X location must not be less than 0.");
             if (LocationY < 0) throw new ArgumentException("Y location must not be less than 0.");
 
             return true;
         }
-        private bool ValidateText()
+        protected bool ValidateText()
         {
             if (Text == null) throw new ArgumentException("Text must not be null.");
             return true;
         }
-        private bool ValidateSize()
+        protected bool ValidateSize()
         {
             if (Width <= 0) throw new ArgumentException("Size must be greater than 0.");
 
             return true;
         }
-        private bool ValidateDimensions()
+        protected bool ValidateDimensions()
         {
             if (Width <= 0) throw new ArgumentException("Width must be greater than 0.");
             if (Height <= 0) throw new ArgumentException("Height must be greater than 0.");
